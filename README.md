@@ -115,6 +115,10 @@ npx @ionic/cli capacitor add android
 1. Create a web build:
 
 ```bash
+# npm
+npm run generate
+
+# npx
 npx nuxi generate
 #or:
 npx nuxi build
