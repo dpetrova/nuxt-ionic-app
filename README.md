@@ -151,6 +151,7 @@ npx cap open ios
 
 ## Deploying with Appflow
 
+0. (!imortant) In package.json scripts section add: "appflow:build": "npm run generate". If such command not set, when build and deploy with Appflow "npm run build" will be runned and build failed because no "dist" directory found in root
 1. Start by creating a repository in the Git provider of your choice and pushing your local project to the remote repository
 2. Log in or create an account at ionic.io to get started with Appflow
 3. Import an existing app and select the repository for your Nuxt project.
