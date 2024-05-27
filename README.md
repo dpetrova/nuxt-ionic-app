@@ -150,5 +150,9 @@ npx cap open ios
 1. Start by creating a repository in the Git provider of your choice and pushing your local project to the remote repository
 2. Log in or create an account at ionic.io to get started with Appflow
 3. Import an existing app and select the repository for your Nuxt project.
+4. Once connected, you’ll see the most recent commit in the Commits screen in Appflow. Select ‘Start build’ from the latest commit.
+5. This brings you to the build screen. Select the Android platform, and the default latest Build stack and Debug build type will pre-select. For this build type, no signing certificates, custom environments, or native configs are needed.
+6. This kicks off the process for a cloud native build of the app for Android devices. Once the build is complete, you can download the .apk and .aab files to run in an emulator or on a device.
+7. When your app is ready for a production build, you can store signing certificates, provisioning profiles, and app store credentials in Appflow to easily build and deploy for end users.
 
 Check out the [deployment documentation](https://ionic.io/docs/appflow/quickstart/github) for more information.
