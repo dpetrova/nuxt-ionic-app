@@ -73,3 +73,82 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Setup Capacitor
+
+1. Install Ionic CLI globally with:
+
+```bash
+# npm
+npm install -g @ionic/cli
+
+# yarn
+yarn global add @ionic/cli
+```
+
+2. Enable Capacitor:
+
+```bash
+# ionic cli
+ionic integrations enable capacitor
+
+# npx
+npx @ionic/cli integrations enable capacitor
+```
+
+3. Add the Android and/or iOS platform(s):
+
+```bash
+# ionic cli
+ionic capacitor add ios
+ionic capacitor add android
+
+# npx
+npx @ionic/cli capacitor add ios
+npx @ionic/cli capacitor add android
+```
+
+4. There are system requirements for building and running iOS and Android apps locally. See the Capacitor environment setup documentation for more details.
+
+## Native Builds with Capacitor
+
+1. Create a web build:
+
+```bash
+npx nuxi generate
+#or:
+npx nuxi build
+```
+
+2. Update your Capacitor project directories with your latest app build:
+
+```bash
+npx cap sync
+```
+
+3. Run the app from the command line using an installed device OR:
+
+- You must set in Environment variable JAVA_HOME the path found in:
+  File -> Settings -> Build, Execution, Deployment -> Build Tools -> Gradle JDK
+  - Something like:
+    JAVA_HOME=D:\Android\Android Studio\jbr
+
+```bash
+npx cap run android
+npx cap run ios
+```
+
+4. (Optional) Open the project in Android Studio or XCode, respectively:
+
+```bash
+npx cap open android
+npx cap open ios
+```
+
+## Deploying with Appflow
+
+1. Start by creating a repository in the Git provider of your choice and pushing your local project to the remote repository
+2. Log in or create an account at ionic.io to get started with Appflow
+3. Import an existing app and select the repository for your Nuxt project.
+
+Check out the [deployment documentation](https://ionic.io/docs/appflow/quickstart/github) for more information.
